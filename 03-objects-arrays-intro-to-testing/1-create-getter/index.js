@@ -7,7 +7,8 @@ export function createGetter(path) {
   if (!path.length) {
     return;
   }
-  return (obj) => path.split(".").reduce((acc, key) => {
+  const pathArray = path.split('.');
+  return (obj) => pathArray.reduce((acc, key) => {
     if (!acc?.hasOwnProperty(key)) {
       return;
     }

@@ -4,7 +4,7 @@
  * @returns {object | undefined} - returns the new object or undefined if nothing did't pass
  */
 export function invertObj(obj) {
-  if (typeof obj !== 'object') {
+  if (!obj) {
     return;
   }
   const res = {};
